@@ -1,5 +1,9 @@
 package entity;
 
+import java.util.Date;
+
+import javax.xml.crypto.Data;
+
 public class Content {
 	public int getId() {
 		return id;
@@ -33,19 +37,19 @@ public class Content {
 		this.content = content;
 	}
 
-	public String getCreateDate() {
+	public Date getCreateDate() {
 		return createDate;
 	}
 
-	public void setCreateDate(String createDate) {
+	public void setCreateDate(Date createDate) {
 		this.createDate = createDate;
 	}
 
-	public String getUpdateDate() {
+	public Date getUpdateDate() {
 		return updateDate;
 	}
 
-	public void setUpdateDate(String updateDate) {
+	public void setUpdateDate(Date updateDate) {
 		this.updateDate = updateDate;
 	}
 
@@ -65,7 +69,7 @@ public class Content {
 		this.authorId = authorId;
 	}
 
-	public Content(int id, String text, String brief, String content, String createDate, String updateDate, int sort,
+	public Content(int id, String text, String brief, String content, Date createDate, Date updateDate, int sort,
 			int authorId) {
 		super();
 		this.id = id;
@@ -82,8 +86,8 @@ public class Content {
 	private String text;
 	private String brief;
 	private String content;
-	private String createDate;
-	private String updateDate;
+	private Date createDate;
+	private Date updateDate;
 	private int sort;
 	private int authorId;
 	

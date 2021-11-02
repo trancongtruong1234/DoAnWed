@@ -1,5 +1,7 @@
 package entity;
 
+import java.util.Date;
+
 public class Member {
 	public int getId() {
 		return id;
@@ -49,23 +51,23 @@ public class Member {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public String getCreateDate() {
+	public Date getCreateDate() {
 		return createDate;
 	}
-	public void setCreateDate(String createDate) {
+	public void setCreateDate(Date createDate) {
 		this.createDate = createDate;
 	}
-	public String getUpdateDate() {
+	public Date getUpdateDate() {
 		return updateDate;
 	}
-	public void setUpdateDate(String updateDate) {
+	public void setUpdateDate(Date updateDate) {
 		this.updateDate = updateDate;
 	}
 	public Member() {
 	}
 	
 	public Member(int id, String firstName, String lastName, String userName, String email, String password,
-			String phone, String description, String createDate, String updateDate) {
+			String phone, String description, Date createDate, Date updateDate) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
@@ -87,6 +89,6 @@ public class Member {
 	private String password;
 	private String phone;
 	private String description;
-	private String createDate;
-	private String updateDate;
+	private Date createDate;
+	private Date updateDate;
 }

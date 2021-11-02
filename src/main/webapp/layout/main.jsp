@@ -6,21 +6,20 @@
 <head>
 <meta charset="ISO-8859-1">
 <title><tiles:getAsString name="title"/></title>
-	<link rel="stylesheet" href="layout/homeStyle.css">
-	<link rel="stylesheet" href="layout/menuStyle.css">
-	<link rel="stylesheet" href="layout/navigationStyle.css">
+<link rel="stylesheet" href="layout/homeStyle.css">
+
 </head>
 <body>
 <div class = "navigition">
 	<tiles:insertAttribute name="navigation" />
 </div>
-<div class="row">
-	<aside>
-		<tiles:insertAttribute name="menu" />
-	</aside>
-	<section>
+<div class = "row">
+<aside>
+	<tiles:insertAttribute name="menu" />
+</aside>
+<section>
 		<tiles:insertAttribute name="body" />
-	</section>
+</section>
 </div>
 </body>
 </html>
