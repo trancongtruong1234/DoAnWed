@@ -17,13 +17,6 @@ public class DaoRegister {
 	ResultSet rs = null;
 	
 	public static void main(String[] args) {
-		DaoRegister da = new DaoRegister();
-		String a= "Ngoc Linh";
-		String b="volinh987@gmail.com";
-		Member cus = da.checkMemberExist(a, b);
-		
-		
-		System.out.print(cus.getUserName() +" "+cus.getEmail() +" "+cus.getPassword() +" "+cus.getUpdateDate());
 	}
 	
 	
@@ -67,6 +60,8 @@ public class DaoRegister {
 				String description = rs.getString(8);
 				Date createdate = rs.getDate(9);
 				Date updatetime = rs.getDate(10);
+				
+				System.out.print(rs.getString(5));
 				
 				return new Member(id,firstname,lastname,username,email,password,phone,description,createdate,updatetime);
 			}

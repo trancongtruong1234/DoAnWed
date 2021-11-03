@@ -54,7 +54,7 @@ public class RegisterController extends HttpServlet {
 			}
 			else 
 			{
-				response.sendRedirect("login.jsp");
+				response.sendRedirect("register.jsp");
 			}
 		}
 			
