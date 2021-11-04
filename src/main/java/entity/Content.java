@@ -13,12 +13,12 @@ public class Content {
 		this.id = id;
 	}
 
-	public String getText() {
-		return text;
+	public String getTitle() {
+		return title;
 	}
 
-	public void setText(String text) {
-		this.text = text;
+	public void setTitle(String text) {
+		this.title = text;
 	}
 
 	public String getBrief() {
@@ -69,11 +69,11 @@ public class Content {
 		this.authorId = authorId;
 	}
 
-	public Content(int id, String text, String brief, String content, Date createDate, Date updateDate, int sort,
+	public Content(int id, String title, String brief, String content, Date createDate, Date updateDate, int sort,
 			int authorId) {
 		super();
 		this.id = id;
-		this.text = text;
+		this.title = title;
 		this.brief = brief;
 		this.content = content;
 		this.createDate = createDate;
@@ -83,7 +83,7 @@ public class Content {
 	}
 
 	private int id;
-	private String text;
+	private String title;
 	private String brief;
 	private String content;
 	private Date createDate;

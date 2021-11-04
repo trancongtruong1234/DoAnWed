@@ -25,6 +25,13 @@
 		<description>/register</description>
 		<servlet-class>controller.RegisterController</servlet-class>
 	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ViewController</display-name>
+		<servlet-name>ViewController</servlet-name>
+		<servlet-class>controller.ViewController</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>Tiles Dispatch</servlet-name>
@@ -33,5 +40,9 @@
 	<servlet-mapping>
 		<servlet-name>RegisterController</servlet-name>
 		<url-pattern>/RegisterController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ViewController</servlet-name>
+		<url-pattern>/ViewController</url-pattern>
 	</servlet-mapping>
 </web-app>
