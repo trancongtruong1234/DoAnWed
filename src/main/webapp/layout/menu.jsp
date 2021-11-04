@@ -7,13 +7,13 @@
 <title>Insert title here</title>
 </head>
 <style>
-<%@include file="menuStyle.css" %>
+
 </style>
 <body>
   <div class="search-container">
     <form action="">
       <input type="text" placeholder="Seach..." name="search">
-      <button type="submit">Submit</button>
+      <button type="submit"><i class="fa fa-seach"> &nbsp; </i></button>
     </form>
   </div>
 <ul class = "menu">

@@ -5,9 +5,8 @@
 <html>
 <head>
 <title><tiles:getAsString name="title" /></title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
 <style type="text/css">
 * {
   box-sizing: border-box;
@@ -74,6 +73,9 @@ section {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+.dropdow:hover{
+  background:#DDDDDD;
+}
 body {
         background-color:#f8f8f8;
       }
@@ -101,6 +103,9 @@ body {
         background-color:White;
         border:1px solid #e7e7e7;
       }
+a{
+	text-decoration: none
+}
 
 </style>
 </head>
