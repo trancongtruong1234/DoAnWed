@@ -1,10 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
 hr {
@@ -98,14 +99,22 @@ table tbody {
 							<th>Action</th>
 						</tr>
 					</thead>
+					
 					<tbody>
+					<c:set var="i" scope="session" value="${1}" />
 						<c:forEach items="${listp}" var="o">
-							<td><c:out value="${o.title}" /></td>
+						<tr>
+							<td>
+								<c:out value="${i}" />
+							</td>
+
 							<td><c:out value="${o.title}" /></td>
 							<td><c:out value="${o.brief}" /></td>
 							<td><c:out value="${o.createDate}" /></td>
-							<td><a href="Edit.jsp?id=${row.id}">Edit</a>&ensp; <a
-								href="delete.jsp?id=${row.id}">Delete</a></td>
+							<td><a href="Edit.jsp=${row.id}">Edit</a>&ensp; <a
+								href="delete.jsp=${row.id}">Delete</a></td>
+							<c:set var="i" scope="session" value="${i+1}" />
+							</tr>
 						</c:forEach>
 					</tbody>
 				</table>
