@@ -17,7 +17,7 @@
     </form>
   </div>
 <ul class = "menu">
-<li><a href ="viewContent.tiles">View contents</a></li>
+<li><a href ="/DoAn/viewContent">View contents</a></li>
 <li><a href ="formContent.tiles">Form contents</a></li>
 </ul>
 </body>
