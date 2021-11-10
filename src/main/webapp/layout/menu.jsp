@@ -12,7 +12,7 @@
 <body>
   <div class="search-container">
     <form action="">
-      <input type="text" placeholder="Seach..." name="search">
+      <input type="text" placeholder="Seach..." class ="txtSearch">
       <button type="submit"><i class="fa fa-seach"> &nbsp; </i></button>
     </form>
   </div>
