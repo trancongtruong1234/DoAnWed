@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="views/formContentCSS.css">
 </head>
 <body>
+<div class = "formContent">
   <h1>Add Content</h1>
   <hr>
   <table>
@@ -29,5 +30,6 @@
             </td>
         </tr>
   </table>
+  </div>
 </body>
 </html>

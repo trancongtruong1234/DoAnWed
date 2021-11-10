@@ -5,13 +5,13 @@ table,th,td {
   width: 90%;
   align-items: center;
 }
-fromContent.input,textarea{
+input,textarea{
     width: 70%;
 }
-.submit{
+submit{
     width: 100px;
     background-color: white;
 }
-.content{
+content{
     background-color: gainsboro;
 }
