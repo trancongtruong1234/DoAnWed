@@ -7,12 +7,12 @@
 <title>Insert title here</title>
 </head>
 <style>
-<%@include file="menuStyle.css" %>
+	<%@include file="menuStyle.css" %>
 </style>
 <body>
   <div class="search-container">
-    <form action="">
-      <input type="text" placeholder="Seach..." name="search">
+    <form action="/DoAn/search" method = "post">
+      <input type="text" placeholder="Search" name="search">
       <button type="submit">Submit</button>
     </form>
   </div>
