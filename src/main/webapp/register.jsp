@@ -6,22 +6,8 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="style/register.css">
-<script>
-	function validateform(){
-		var username = document.forms["Menu"]["username"].value;
-		var email = document.forms["Menu"]["email"].value;
-		var password = document.forms["Menu"]["password"].value;
-		var repassword = document.forms["Menu"]["repassword"].value;
-		var err = document.getElementById("err");
-		var mess = "";
-		//Kiểm tra thông tin
-		if(username=="" || email =="" || password =="" || repassword ==""){
-			mess = "Vui long nhap day du thong tin";
-			err.innerHTML= mess;
-			return false;
-		}
-}
-</script>
+<script type="text/javascript" src= "js/register.js"></script>
+
 
 </head>
 <body>

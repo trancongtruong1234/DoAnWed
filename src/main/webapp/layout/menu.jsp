@@ -19,7 +19,7 @@
   	</div>
 		<div id = "list">
 			<ul>
-				<li><a href ="viewContent.tiles"><i class="fa fa-table" style="color: #528FC7"></i> &nbsp;View contents</a>
+				<li><a href ="/DoAn/ViewController"><i class="fa fa-table" style="color: #528FC7"></i> &nbsp;View contents</a>
 				<li><a href ="formContent.tiles"><i class="fa fa-edit" style="color: #528FC7"></i>&nbsp;Form contents</a></li>
 			</ul>
 		</div>

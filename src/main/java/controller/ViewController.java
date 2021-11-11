@@ -40,7 +40,7 @@ public class ViewController extends HttpServlet {
 				List<Content> list=dao.getdata();
 				//b2 set data cho jsp
 				request.setAttribute("listp", list);
-				request.getRequestDispatcher("/views/viewContent.jsp").forward(request, response);
+				request.getRequestDispatcher("/viewContent.jsp").forward(request, response);
 	}
 
 	/**
