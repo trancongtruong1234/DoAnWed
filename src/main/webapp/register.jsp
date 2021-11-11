@@ -5,7 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="register.css">
+<link rel="stylesheet" type="text/css" href="style/register.css">
 <script>
 	function validateform(){
 		var username = document.forms["Menu"]["username"].value;

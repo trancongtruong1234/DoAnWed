@@ -5,7 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-<link rel="stylesheet" href="views/formContentCSS.css">
+<link rel="stylesheet" href="style/formContentCSS.css">
 </head>
 <body>
 <div class = "formContent">
