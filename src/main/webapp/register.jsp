@@ -5,47 +5,38 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="style/register.css">
 <script>
 	function validateform(){
-		//Lấy thông tin người dùng
-	var id = document.forms["addfrm"]["id"].value;
-	var name = document.forms["addfrm"]["name"].value;
-	var email = document.forms["addfrm"]["email"].value;
-	var country = document.forms["addfrm"]["country"].value;
-	var err = document.getElementById("err");
-	var mess = "";
-		
-	//Kiểm tra thông tin
-	if(id=="" || name =="" || email =="" || country ==""){
-		mess = "Vui long nhap day du thong tin";
-		err.innerHTML= mess;
-		return false;
-	}
+		var username = document.forms["Menu"]["username"].value;
+		var email = document.forms["Menu"]["email"].value;
+		var password = document.forms["Menu"]["password"].value;
+		var repassword = document.forms["Menu"]["repassword"].value;
+		var err = document.getElementById("err");
+		var mess = "";
+		//Kiểm tra thông tin
+		if(username=="" || email =="" || password =="" || repassword ==""){
+			mess = "Vui long nhap day du thong tin";
+			err.innerHTML= mess;
+			return false;
+		}
 }
 </script>
 
 </head>
 <body>
-	<div class="table" style="margin-left: 20%; margin-right: 20%" >
-		<h1>Add User</h1>
-		<p style="color:red; text-align: center" id ="err"></p>
-		<form action="RegisterController" method="post" name="addfrm" onsubmit="return validateform()">
-		
-			<br /> <input style="width: 100%; height: 23px" type="text"
-				name="username" id="username" placeholder="User name"  /><br /><br />
-		
-			<br /> <input style="width: 100%; height: 23px" type="text"
-				name="email" id="email" placeholder="E-mail"/><br /><br />
-				
-			 <br /> <input style="width: 100%; height: 23px"
-				type="text" name="password" id="password" placeholder="Password"/><br /><br/>
-				
-			<br /> <input style="width: 100%; height: 23px"
-				type="text" name="repassword" id="repassword" placeholder="Re-Password"/><br />
-			<br />
-			<button id="button" type="submit" class="button">Register</button>
-		</form>
-		
-	</div>
+
+        <div class="center">
+            <div class="header">Register</div>
+            <form action ="RegisterController" class="Menu" id ="Menu" method="post" onsubmit="return validateform()">
+                <p style="color:red; text-align: center" id ="err"></p>
+                <p><input type="text" placeholder="User name" size="50" minlength="5" maxlength="50" id="username" class ="username" name ="username"></p>
+                <p><input type="email" placeholder="E-mail" size="50" minlength="5" maxlength="50" id="email" class ="email" name ="email"></p>
+                <p><input type="password" placeholder="Password" size="50" min="8" maxlength="30" id="password" class ="password" name ="password"></p>
+                <p><input type="password" placeholder="Re Password" min="8" maxlength="30" id="repassword" class ="repassword" name ="repassword"></p>
+                <p><input type="submit" value="Register" id="btnRegister"></p>
+                <p><a href="login.jsp">Click here to Login</a></p>
+            </form>
+        </div>
 </body>
 </html>

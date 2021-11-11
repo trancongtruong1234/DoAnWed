@@ -5,18 +5,19 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-<style>
-	<%@include file="navigationStyle.css"%>
-</style>
 </head>
 <body>
-CSS
-<div class="dropdown" style="float:right;">
-  <button class="dropbtn" >Dropdown</button>
-  <div class="dropdown-content">
-  <a href="home.jsp">User Profile</a>
-  <a href="#">Logout</a>
-  </div>
-</div>
+CMS
+<div class="dropdown">
+	 	 <span> 
+	 	 	<i class="fa fa-user"  style="color: #23527c"></i> 
+	 	 	&nbsp; 
+	 	 	<i class="fa fa-caret-down" style="color: #23527c"></i>
+	 	 </span>
+	  <div class="dropdown-content">	
+		  <p><i class="fa fa-user"> &nbsp; </i><a href="home.jsp">User Profile</a></p>
+		  <p><i class="fa fa-sign-in "> &nbsp;</i><a href="home.jsp">Logout</a></p>
+	  </div>
+	</div>
 </body>
 </html>

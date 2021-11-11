@@ -1,0 +1,17 @@
+table,th,td {
+  padding: 10px;
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 90%;
+  align-items: center;
+}
+input,textarea{
+    width: 70%;
+}
+submit{
+    width: 100px;
+    background-color: white;
+}
+content{
+    background-color: gainsboro;
+}
