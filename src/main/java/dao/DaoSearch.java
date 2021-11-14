@@ -16,15 +16,6 @@ public class DaoSearch {
 	PreparedStatement ps = null;
 	ResultSet rs = null;
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		DaoSearch dao = new DaoSearch();
-		List<Content> list = dao.search("Louis");
-		for (Content c : list) {
-			System.out.println(c);
-		}
-	}
-
 	public List<Content> search(String txtSearch) {
 		List<Content> list = new ArrayList<>();
 		String query = "select id,Title,Brief,CreatedDate from Content where Title like ? or Brief like ?";

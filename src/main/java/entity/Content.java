@@ -85,7 +85,7 @@ public class Content {
 	public Content(int id, String text, String brief, Date createDate) {
 		super();
 		this.id = id;
-		this.text = text;
+		this.title = text;
 		this.brief = brief;
 		this.createDate = createDate;
 	}
