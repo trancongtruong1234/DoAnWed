@@ -1,33 +1,35 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-<link rel="stylesheet" href="views/formContentCSS.css">
+<link rel="stylesheet" href="style/formContentCSS.css">
+<script language="javascript" src="js/formContent.js"></script>
 </head>
 <body>
-  <h1>Add Content</h1>
-  <hr>
-  <table>
-        <tr>
-            <td class="content">
-                Content Form Elements
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label>Title</label> <br>
-                <input><br>
-                <label>Brief</label> <br>
-                <textarea name="brief" id="" cols="30" rows="6" required maxlength="150"></textarea> <br>
-                <label>Content</label> <br>
-                <textarea name="content" id="" cols="30" rows="6" required maxlength="1000"></textarea> <br>
-                <input class="submit" type="submit" value="Submit Button">
-                <input class="submit" type="submit" value="Reset Button">
-            </td>
-        </tr>
-  </table>
+	<div class="formContent">
+		<h1>Add Content</h1>
+		<hr>
+		<form id="form">
+			<table id="tableformcontent">
+				<tr>
+					<td class="content">Content Form Elements</td>
+				</tr>
+				<tr>
+					<td><label>Title</label> <br> <input minlength="10" maxlength="200" id="title"><br> 
+					<label>Brief</label>
+					<br> <textarea name="brief" id="brief" cols="30" rows="10" required maxlength="150" minlength="30"></textarea> 
+					<br> 
+					<label>Content</label>
+					<br> 
+					<textarea name="content" id="content" cols="30" rows="10" required maxlength="1000" minlength="50"></textarea> <br>
+					<input onclick="check()" class="submit" type="button" value="Submit Button"> 
+					<input onclick="resetButton()" class="submit" type="button" value="Reset Button"></td>
+				</tr>
+			</table>
+		</form>
+	</div>
 </body>
 </html>

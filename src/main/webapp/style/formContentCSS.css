@@ -1,11 +1,11 @@
-table,th,td {
+#tableformcontent, td {
   padding: 10px;
   border: 1px solid black;
   border-collapse: collapse;
   width: 90%;
   align-items: center;
 }
-input,textarea{
+textarea{
     width: 70%;
 }
 .submit{
