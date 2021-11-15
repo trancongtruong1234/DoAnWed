@@ -5,8 +5,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link rel="stylesheet" href="style/formContentCSS.css">
 <script language="javascript" src="js/formContent.js"></script>
-<link rel="stylesheet" href ="style/formContentCSS.css">
 </head>
 <body>
 	<div class="formContent">
