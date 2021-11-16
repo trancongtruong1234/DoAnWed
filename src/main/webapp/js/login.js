@@ -31,10 +31,7 @@ pass.addEventListener('keyup', function(){
        return true;
    }
 })
-// redirect until success
-function Redirect() {
-    window.location="register.html";
- }
+
 // check email
 function checkEmail() { 
     var email = document.getElementById('#user'); 
@@ -54,8 +51,7 @@ function validate() {
         document.getElementById('error').innerHTML = 'Please fill the Password !';
         return false;
     } else {
-        /* alert('Successfully logged in'); */
-        document.write("Successfully logged in , You will be redirected to main page in 3 sec.");
-        setTimeout('Redirect()', 3000);
+        alert('Successfully logged in'); 
+        return true ;
     }
 }
