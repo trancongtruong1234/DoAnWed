@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="style/login.css">
+    <link rel="stylesheet" type="text/css" href="login.css">
 </head>
 <body>
     <form class="form-container" method="post" action="home.jsp" onsubmit=" return validate()">
@@ -36,6 +36,6 @@
             <a href="#" >Click here to Register</a>
         </div>
     </form>
-    <script type="text/javascript" src= "js/login.js"></script>
+    <script type="text/javascript" src= "login.js"></script>
 </body>
 </html>
