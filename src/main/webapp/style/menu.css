@@ -5,6 +5,7 @@
 	height: 50px;
 	line-height: 50px;
 	margin-left: 10px;
+	display: inline-block;
 }
 
 .menu .list ul{
@@ -29,4 +30,14 @@
 }
 .menu .list ul li:hover {
 	background: #F0F0F0;
+}
+.menu .search-container input{
+	width: 75%;
+	height: 30px;
+	border-radius: 3px;
+}
+.menu .search-container button{
+	width: 20%;
+	height: 30px;
+	margin-left: -6px;
 }

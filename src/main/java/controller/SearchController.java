@@ -1,30 +1,26 @@
 package controller;
 
-
 import java.io.IOException;
 import java.util.List;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.DaoViewContent;
+import dao.DaoSearch;
 import entity.Content;
-import dao.DaoViewContent;
 
 /**
- * Servlet implementation class ViewController
+ * Servlet implementation class Search
  */
-@WebServlet(urlPatterns = {"/viewContent"})
-public class ViewController extends HttpServlet {
+public class SearchController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ViewController() {
+    public SearchController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,22 +30,19 @@ public class ViewController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-		// get data từ dao
-				DaoViewContent dao = new DaoViewContent();
-				List<Content> list=dao.getdata();
-				//b2 set data cho jsp
-				request.setAttribute("listp", list);
-				request.getRequestDispatcher("viewContent.tiles").forward(request, response);
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
-		
+		String txtSearch = request.getParameter("search");
+		DaoSearch daosearch = new DaoSearch();
+		List<Content> list = daosearch.search(txtSearch);
+		request.setAttribute("listSearch", list);
+		request.getRequestDispatcher("search.tiles").forward(request, response);
 	}
 
 }

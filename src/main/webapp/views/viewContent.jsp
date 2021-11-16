@@ -77,6 +77,14 @@ table tbody {
 	word-break: break-word;
 }
 </style>
+<script>
+	function showMess(id){
+		var option = confirm ('Ban có muon xoa hay k');
+			if (option === true){
+			window.location.href = 'DeleteContent?id='+id;
+			}
+		}
+</script>
 </head>
 <body>
 	<div class="view-body">
@@ -99,21 +107,18 @@ table tbody {
 							<th>Action</th>
 						</tr>
 					</thead>
-					
 					<tbody>
-					<c:set var="i" scope="session" value="${1}" />
+						<c:set var="i" scope="session" value="${1}" />
 						<c:forEach items="${listp}" var="o">
-						<tr>
-							<td>
-								<c:out value="${i}" />
-							</td>
+							<tr>
+								<td><c:out value="${i}" /></td>
 
-							<td><c:out value="${o.title}" /></td>
-							<td><c:out value="${o.brief}" /></td>
-							<td><c:out value="${o.createDate}" /></td>
-							<td><a href="Edit.jsp=${row.id}">Edit</a>&ensp; <a
-								href="delete.jsp=${row.id}">Delete</a></td>
-							<c:set var="i" scope="session" value="${i+1}" />
+								<td><c:out value="${o.title}" /></td>
+								<td><c:out value="${o.brief}" /></td>
+								<td><c:out value="${o.createDate}" /></td>
+								<td><a href="EditController?id=${o.id}">Edit</a>&ensp; <a
+									href="#" onclick ="showMess(${o.id})">Delete</a></td>
+								<c:set var="i" scope="session" value="${i+1}" />
 							</tr>
 						</c:forEach>
 					</tbody>

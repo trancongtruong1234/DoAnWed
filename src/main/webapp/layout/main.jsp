@@ -7,8 +7,6 @@
 <title><tiles:getAsString name="title" /></title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel ="stylesheet" href="style/main.css">
-<link rel ="stylesheet" href="style/navigation.css">
-<link rel="stylesheet" href ="style/menu.css">
 
 </head>
 <body>
@@ -18,7 +16,7 @@
 	
 	<div class="row">
 		<aside>
-			<tiles:insertAttribute name="menu" />
+			<tiles:insertAttribute name="menu"/>
 		</aside>
 		<section>
 			<tiles:insertAttribute name="body" />

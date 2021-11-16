@@ -20,8 +20,8 @@
 		</servlet-class>
 	</servlet>
 	<servlet>
-		<servlet-name>RegisterController</servlet-name>
 		<display-name>RegisterController</display-name>
+		<servlet-name>RegisterController</servlet-name>
 		<description>/register</description>
 		<servlet-class>controller.RegisterController</servlet-class>
 	</servlet>
@@ -31,6 +31,41 @@
 		<display-name>ViewController</display-name>
 		<servlet-name>ViewController</servlet-name>
 		<servlet-class>controller.ViewController</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>EditProfileController</display-name>
+		<servlet-name>EditProfileController</servlet-name>
+		<servlet-class>controller.EditProfileController</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>SearchController</display-name>
+		<servlet-name>SearchController</servlet-name>
+		<servlet-class>controller.SearchController</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>EditContentController</display-name>
+		<servlet-name>EditContentController</servlet-name>
+		<servlet-class>controller.EditContentController</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>DeleteContentController</display-name>
+		<servlet-name>DeleteContentController</servlet-name>
+		<servlet-class>controller.DeleteContentController</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>EditController</display-name>
+		<servlet-name>EditController</servlet-name>
+		<servlet-class>controller.EditController</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -44,5 +79,25 @@
 	<servlet-mapping>
 		<servlet-name>ViewController</servlet-name>
 		<url-pattern>/ViewController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>EditProfileController</servlet-name>
+		<url-pattern>/EditProfileController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SearchController</servlet-name>
+		<url-pattern>/search</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>EditContentController</servlet-name>
+		<url-pattern>/EditContentController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteContentController</servlet-name>
+		<url-pattern>/DeleteContentController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>EditController</servlet-name>
+		<url-pattern>/EditController</url-pattern>
 	</servlet-mapping>
 </web-app>

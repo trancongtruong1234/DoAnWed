@@ -1,30 +1,25 @@
 package controller;
 
-
 import java.io.IOException;
-import java.util.List;
+import java.sql.Date;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.DaoViewContent;
-import entity.Content;
-import dao.DaoViewContent;
+import dao.DaoEditContent;
 
 /**
- * Servlet implementation class ViewController
+ * Servlet implementation class EditContentController
  */
-@WebServlet(urlPatterns = {"/viewContent"})
-public class ViewController extends HttpServlet {
+public class EditContentController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ViewController() {
+    public EditContentController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -35,12 +30,6 @@ public class ViewController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-		// get data từ dao
-				DaoViewContent dao = new DaoViewContent();
-				List<Content> list=dao.getdata();
-				//b2 set data cho jsp
-				request.setAttribute("listp", list);
-				request.getRequestDispatcher("viewContent.tiles").forward(request, response);
 	}
 
 	/**
@@ -49,6 +38,13 @@ public class ViewController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
+		String title = request.getParameter("title");
+		String brief = request.getParameter("brief");
+		String content = request.getParameter("content");
+		String id = request.getParameter("id");
+		DaoEditContent dao = new DaoEditContent();
+		dao.updateContent(title, brief, content,id);
+		response.sendRedirect("/views/editContent.jsp");
 		
 	}
 

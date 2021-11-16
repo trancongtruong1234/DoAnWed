@@ -21,4 +21,10 @@
     <put-attribute name="title" value="View Content" />
     <put-attribute name="body" value="/views/viewContent.jsp" />
   </definition>
+  
+  <!-- Search  -->
+  <definition name="search" extends="main">
+    <put-attribute name="title" value="Search" />
+    <put-attribute name="body" value="/views/search.jsp" />
+  </definition>
 </tiles-definitions>

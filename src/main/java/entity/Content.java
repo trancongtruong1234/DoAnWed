@@ -81,6 +81,13 @@ public class Content {
 		this.sort = sort;
 		this.authorId = authorId;
 	}
+	public Content(int id, String text, String brief, Date createDate) {
+		super();
+		this.id = id;
+		this.title = text;
+		this.brief = brief;
+		this.createDate = createDate;
+	}
 
 	private int id;
 	private String title;
