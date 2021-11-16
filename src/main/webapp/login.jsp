@@ -33,7 +33,7 @@
             <input type="submit" name="login-btn" value="Login">
         </div>
         <div class="form-register">
-            <a href="#" >Click here to Register</a>
+            <a href="register.jsp" >Click here to Register</a>
         </div>
     </form>
     <script type="text/javascript" src= "login.js"></script>
