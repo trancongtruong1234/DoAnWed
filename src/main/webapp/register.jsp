@@ -8,7 +8,6 @@
 <link rel="stylesheet" type="text/css" href="style/register.css">
 <script type="text/javascript" src= "js/register.js"></script>
 
-
 </head>
 <body>
 

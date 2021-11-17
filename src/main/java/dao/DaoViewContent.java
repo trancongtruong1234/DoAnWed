@@ -20,7 +20,7 @@ public class DaoViewContent {
 
 	public List<Content> getdata() {
 		List<Content> list = new ArrayList<>();
-		String query = "select * from Content where AuthorId= 2";
+		String query = "select * from Content where AuthorId= 1";
 		try {
 			new DBContext();
 			conn = DBContext.getConnection();// mở kết nối với mýql
