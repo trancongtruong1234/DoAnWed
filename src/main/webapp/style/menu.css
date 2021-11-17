@@ -2,10 +2,8 @@
 
 .menu .search-container {
 	width: auto;
-	height: 50px;
-	line-height: 50px;
+	padding: 10px;
 	margin-left: 10px;
-	display: inline-block;
 }
 
 .menu .list ul{
@@ -37,7 +35,9 @@
 	border-radius: 3px;
 }
 .menu .search-container button{
-	width: 20%;
+	width: 30px;
 	height: 30px;
 	margin-left: -6px;
+	cursor: pointer;
+	
 }

@@ -1,6 +1,6 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!DOCTYPE html>
 <html>
@@ -112,7 +112,6 @@ table tbody {
 						<c:forEach items="${listp}" var="o">
 							<tr>
 								<td><c:out value="${i}" /></td>
-
 								<td><c:out value="${o.title}" /></td>
 								<td><c:out value="${o.brief}" /></td>
 								<td><c:out value="${o.createDate}" /></td>
