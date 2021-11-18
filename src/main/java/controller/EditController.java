@@ -35,7 +35,7 @@ public class EditController extends HttpServlet {
 		DaoGetInfor dao = new DaoGetInfor();
 		Content s =  dao.getIf(id);
 		request.setAttribute("st", s);
-		request.getRequestDispatcher("/views/editContent.jsp").forward(request, response);
+		request.getRequestDispatcher("editContent.tiles").forward(request, response);
 		//System.out.println(id);
 	}
 

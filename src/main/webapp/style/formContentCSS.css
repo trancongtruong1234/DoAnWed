@@ -1,17 +1,18 @@
- #tableformcontent, td {
+#tableformcontent, td {
   padding: 10px;
   border: 1px solid black;
   border-collapse: collapse;
   width: 90%;
   align-items: center;
 }
-textarea{
-    width: 70%; 
+#title, textarea{
+    width: 500px;
 }
 .submit{
     width: 100px;
     background-color: white;
+    height: 30px;
 }
 .content{
-    background-color: gainsboro;
+    background-color: #F5F5F5;
 }

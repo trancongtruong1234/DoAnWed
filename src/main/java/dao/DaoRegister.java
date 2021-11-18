@@ -39,7 +39,7 @@ public class DaoRegister {
 	
 	public Member checkMemberExist(String usernamein, String emailin ) {
 		String query = "select * from member where UserName ="+"?"+
-				"and Email ="+"?";
+				"or Email ="+"?";
 
 		try {
 			new DBContext();

@@ -7,86 +7,44 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel ="stylesheet" href="style/viewContent.css">
+<script type="text/javascript" src= "js/viewContent.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript">
+			$(function() {
+				$('.preloading').fadeIn('slow', function() {
+					$(".load").delay(5000).fadeOut('slow');
+				});
+			});
+		</script>
 <style>
-hr {
-	width: 95%;
-}
-
-.view-body .title {
-	margin-left: 2.5%;
-}
-
-.field {
-	margin: 0 2.5% 0 2.5%;
-	border: 2px solid #DDDDDD;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-	border-top-width: 2px;
-}
-
-.form {
-	margin-top: 10px;
-}
-
-.view-body {
-	display: block;
-}
-
-.view-body .view {
-	margin: 0 2.5% 0 2.5%;
-	margin-top: 20px;
-	border: 2px solid #DDDDDD;
-	background-color: #f5f5f5;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
-	border-bottom-width: 0px;
-}
-
-.form table {
-	border-collapse: collapse;
-	border: 2px solid #DDDDDD;
+.load {
 	width: 100%;
+	height: 100%;
+	background: #fff;
+	z-index: 1000;
+	position: absolute;
+	display: block;
+	overflow: hidden;
 }
 
-.field table tr {
-	text-align: left;
+.nd {
+	margin-top: 2.5%;
+	margin-left: 5%;
+	font-size: 40px;
 }
 
-.field table th, td {
-	padding: 7px;
-	border: 2px solid #DDDDDD;
-}
-
-.view .list {
-	padding-top: 5px;
-}
-
-table tbody tr:nth-child(odd) {
-	background-color: #f9f9f9;
-}
-
-table tbody tr:nth-child(even) {
-	background-color: white;
-}
-
-table tbody tr:nth-child(1) {
-	background-color: #f9f9f9;
-}
-
-table tbody {
-	word-break: break-word;
+.preloading {
+	overflow: hidden;
 }
 </style>
-<script>
-	function showMess(id){
-		var option = confirm ('Ban có muon xoa hay k');
-			if (option === true){
-			window.location.href = 'DeleteContent?id='+id;
-			}
-		}
-</script>
 </head>
 <body>
+	<div class="preloading"> 
+		<div class="load"> 
+			<div class="nd">Loading</div>
+		</div>
+	</div>
 	<div class="view-body">
 		<div class="title">
 			<h1>View Content</h1>

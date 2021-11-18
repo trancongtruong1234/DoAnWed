@@ -22,7 +22,7 @@
 				<p><i class="fa fa-user"> &nbsp; </i><a href="home.jsp">User Profile</a></p>
 		 	</div>
 		 	<div class ="dropdown-item">
-		 		<p><i class="fa fa-sign-in "> &nbsp;</i><a href="home.jsp">Logout</a></p>
+		 		<p><i class="fa fa-sign-in "> &nbsp;</i><a href="login.jsp">Logout</a></p>
 		 	</div>
 	  	</div>
 	</div>

@@ -51,10 +51,13 @@ public class RegisterController extends HttpServlet {
 			if(member == null)
 			{
 				dao.register(username, email, password);
+				response.sendRedirect("login.jsp");
 			}
 			else 
 			{
-				response.sendRedirect("register.jsp");
+				String err ="Tai khoan da ton tai";
+				request.setAttribute("err", err);
+				request.getRequestDispatcher("register.jsp").forward(request, response);
 			}
 		}
 			
