@@ -5,13 +5,14 @@
   width: 90%;
   align-items: center;
 }
-textarea{
+#title, textarea{
     width: 70%;
 }
 .submit{
     width: 100px;
     background-color: white;
+    height: 30px;
 }
 .content{
-    background-color: gainsboro;
+    background-color: #F5F5F5;
 }
