@@ -78,16 +78,16 @@
     <finalName>DoAn</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
-        <plugin>
+        <plugin><!-- dọn dẹp sau build -->
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.1.0</version>
         </plugin>
         <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
-        <plugin>
+        <plugin> <!-- sao chép đầu ra vòa jar -->
           <artifactId>maven-resources-plugin</artifactId>
           <version>3.0.2</version>
         </plugin>
-        <plugin>
+        <plugin> <!-- biên dịch các nguồn java -->
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.8.0</version>
         </plugin>
@@ -95,11 +95,11 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.22.1</version>
         </plugin>
-        <plugin>
+        <plugin> <!-- Xây dựng một war chạy môi trường wed từ bản hiện tại -->
           <artifactId>maven-war-plugin</artifactId>
           <version>3.2.2</version>
         </plugin>
-        <plugin>
+        <plugin><!-- cài đặt các thành phần -->
           <artifactId>maven-install-plugin</artifactId>
           <version>2.5.2</version>
         </plugin>

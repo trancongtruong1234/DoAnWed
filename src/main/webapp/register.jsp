@@ -18,9 +18,9 @@
                 <p style="color:red; text-align: center" id ="err"></p>
                  <p style="color:red; text-align: center">${err}</p>
                 <p><input type="text" placeholder="User name" size="50" minlength="5" maxlength="50" id="username" class ="username" name ="username"></p>
-                <p><input type="email" placeholder="E-mail" size="50" minlength="5" maxlength="50" id="email" class ="email" name ="email"></p>
-                <p><input type="password" placeholder="Password" size="50" min="8" maxlength="30" id="password" class ="password" name ="password"></p>
-                <p><input type="password" placeholder="Re Password" min="8" maxlength="30" id="repassword" class ="repassword" name ="repassword"></p>
+                <p><input type="email" placeholder="E-mail" size="50" minlength="5" id="email" class ="email" name ="email"></p>
+                <p><input type="password" placeholder="Password" size="50" minlength="8" maxlength="30" id="password" class ="password" name ="password"></p>
+                <p><input type="password" placeholder="Re Password" minlength="8" maxlength="30" id="repassword" class ="repassword" name ="repassword"></p>
                 <p><button type="submit" value="Register" id="btnRegister">Register</button></p>
                 <p><a href="login.jsp">Click here to Login</a></p>
             </form>
