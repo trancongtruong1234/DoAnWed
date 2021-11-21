@@ -32,11 +32,11 @@ CREATE TABLE Content (
 
 -- them du lieu cho bang Member
 
-INSERT INTO Member(FisrtName,LastName,UserName,Email,Password,Phone,Description,CreatedDate,UpdateTime) VALUES('Tam','Nguyen Van','Van Tam','nguyentam123@gmail.com','123456','0256895684','Tai khoan dau tien','2021-09-20 13:25:12','2021-09-20 23:15:12' );
-INSERT INTO Member(FisrtName,LastName,UserName,Email,Password,Phone,Description,CreatedDate,UpdateTime) VALUES('Thang','Tran Quyet','Quyet Thang','quyetthang321@gmail.com','132456','0256485692','Tai khoan thu hai','2021-10-20 14:21:10','2021-10-20 22:11:22' );
-INSERT INTO Member(FisrtName,LastName,UserName,Email,Password,Phone,Description,CreatedDate,UpdateTime) VALUES('Hong','Bui Thi','Thi Hong','buihong456@gmail.com','142356','0325698745','Tai khoan thu ba','2021-10-12 13:25:12','2021-10-12 23:15:12' );
-INSERT INTO Member(FisrtName,LastName,UserName,Email,Password,Phone,Description,CreatedDate,UpdateTime) VALUES('Thien','Hoang Van','Van Thien','hoangthien789@gmail.com','152346','0315262451','Tai khoan thu tu','2021-11-20 13:25:12','2021-11-20 23:15:12' );
-INSERT INTO Member(FisrtName,LastName,UserName,Email,Password,Phone,Description,CreatedDate,UpdateTime) VALUES('Linh','Vo Thi Ngoc','Ngoc Linh','volinh987@gmail.com','162345','0387545654','Tai khoan thu nam','2021-12-20 13:25:12','2021-12-20 23:15:12' );
+INSERT INTO Member(FisrtName,LastName,UserName,Email,Password,Phone,Description,CreatedDate,UpdateTime) VALUES('Tam','Nguyen Van','Van Tam','nguyentam123@gmail.com','123456789','0256895684','Tai khoan dau tien','2021-09-20 13:25:12','2021-09-20 23:15:12' );
+INSERT INTO Member(FisrtName,LastName,UserName,Email,Password,Phone,Description,CreatedDate,UpdateTime) VALUES('Thang','Tran Quyet','Quyet Thang','quyetthang321@gmail.com','132456789','0256485692','Tai khoan thu hai','2021-10-20 14:21:10','2021-10-20 22:11:22' );
+INSERT INTO Member(FisrtName,LastName,UserName,Email,Password,Phone,Description,CreatedDate,UpdateTime) VALUES('Hong','Bui Thi','Thi Hong','buihong456@gmail.com','142356789','0325698745','Tai khoan thu ba','2021-10-12 13:25:12','2021-10-12 23:15:12' );
+INSERT INTO Member(FisrtName,LastName,UserName,Email,Password,Phone,Description,CreatedDate,UpdateTime) VALUES('Thien','Hoang Van','Van Thien','hoangthien789@gmail.com','152346789','0315262451','Tai khoan thu tu','2021-11-20 13:25:12','2021-11-20 23:15:12' );
+INSERT INTO Member(FisrtName,LastName,UserName,Email,Password,Phone,Description,CreatedDate,UpdateTime) VALUES('Linh','Vo Thi Ngoc','Ngoc Linh','volinh987@gmail.com','162345789','0387545654','Tai khoan thu nam','2021-12-20 13:25:12','2021-12-20 23:15:12' );
 
 -- them du lieu cho bang Content
 INSERT INTO Content(Title,Brief,Content,CreatedDate,UpdateTime,Sort,AuthorId) VALUES('Louis Vuitton – Archligh','Một đôi Chunky đầu tiên trong BXH.','Xuất hiện trong Tuần lễ thời trang 2018, Archlight của Louis Vuitton là đôi sneaker đã thực sự gây được chú ý mạnh mẽ.

@@ -51,7 +51,6 @@ function validate() {
         document.getElementById('error').innerHTML = 'Please fill the Password !';
         return false;
     } else {
-        alert('Successfully logged in'); 
         return true ;
     }
 }
