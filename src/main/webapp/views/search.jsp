@@ -66,14 +66,6 @@ table tbody tr:nth-child(odd) {
 	background-color: #f9f9f9;
 }
 
-table tbody tr:nth-child(even) {
-	background-color: white;
-}
-
-table tbody tr:nth-child(1) {
-	background-color: #f9f9f9;
-}
-
 table tbody {
 	word-break: break-word;
 }
@@ -82,11 +74,11 @@ table tbody {
 <body>
 	<div class="view-body">
 		<div class="title">
-			<h1>View Content</h1>
+			<h1>Search Content</h1>
 		</div>
 		<hr>
 		<fieldset class="view">
-			<div class="list">View Content List</div>
+			<div class="list">Search Content List</div>
 		</fieldset>
 		<fieldset class="field">
 			<div class="form">

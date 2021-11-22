@@ -8,44 +8,22 @@ import java.sql.SQLException;
 import context.DBContext;
 import entity.Member;
 
-
-public class DaoEditProfile {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
+public class TestDaoLogin {
 	Connection conn = null;
 	PreparedStatement ps = null;
 	ResultSet rs = null;
 	
-	public void editProfile(String fname, String lname, String phone, String desc, String id ) {
-		String query = "update Member set FisrtName= ?, LastName= ?, Phone= ?, Description= ? where id = ?";
+	public Member login(String user, String pass) {
+		String query = "select id,FisrtName,LastName,Email,Phone,Description from Member where Email = ? and Password = ?";
 		try {
 			new DBContext();
 			conn = DBContext.getConnection();
 			ps = conn.prepareStatement(query);
-			ps.setString(1, fname);
-			ps.setString(2, lname);
-			ps.setString(3, phone);
-			ps.setString(4, desc);
-			ps.setString(5, id);			
-			ps.executeUpdate();
-		} catch (SQLException e) {
-			printSQLException(e);
-		}
-	}
-	
-	public Member getById(int eid) {
-		String query = "select FisrtName, LastName, Phone, Description from Member where id =?";
-		try {
-			new DBContext();
-			conn = DBContext.getConnection();
-			ps = conn.prepareStatement(query);
-			ps.setInt(1, eid);
+			ps.setString(1, user);
+			ps.setString(2, pass);
 			rs= ps.executeQuery();
 			while (rs.next()) {
-				return new Member(rs.getString(1), rs.getString(2), rs.getString(3),rs.getString(4));
+				return new Member(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6));
 			}
 			
 		} catch (SQLException e) {

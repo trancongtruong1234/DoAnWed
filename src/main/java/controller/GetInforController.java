@@ -6,19 +6,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.DaoEditProfile;
 
+import dao.DaoEditProfile;
+import entity.Member;
 
 /**
- * Servlet implementation class EditProfileController
+ * Servlet implementation class GetInforController
  */
-public class EditProfileController extends HttpServlet {
+public class GetInforController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public EditProfileController() {
+    public GetInforController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,6 +29,12 @@ public class EditProfileController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		int id = (int) request.getSession().getAttribute("id");
+		
+		DaoEditProfile dao = new DaoEditProfile();
+		Member m = dao.getById(id);
+		request.setAttribute("detail", m);
+		request.getRequestDispatcher("home.jsp").forward(request, response);
 	}
 
 	/**
@@ -36,15 +43,7 @@ public class EditProfileController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
-		String fname = request.getParameter("fname");
-		String lname = request.getParameter("lname");
-		String phone = request.getParameter("phone");
-		String description = request.getParameter("description");
-		String id = request.getParameter("id");
 		
-		DaoEditProfile dao = new DaoEditProfile();
-		dao.editProfile(fname, lname, phone, description, id);
-		request.getRequestDispatcher("viewContent.tiles").forward(request, response);
 	}
 
 }

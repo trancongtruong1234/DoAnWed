@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="style/login.css">
 </head>
 <body>
-    <form class="form-container" method="post" onsubmit=" return validate()">
+    <form class="form-container" method="post" action="login"  return validate()">
         <p id="error"></p>
         <div class="form-title">
             Please Sign In

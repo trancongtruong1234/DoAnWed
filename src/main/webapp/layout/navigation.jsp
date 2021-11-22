@@ -15,7 +15,7 @@ CMS
 	 	 	<i class="fa fa-caret-down" style="color: #23527c"></i>
 	 	 </span>
 	  <div class="dropdown-content">	
-		  <p><i class="fa fa-user"> &nbsp; </i><a href="home.jsp">User Profile</a></p>
+		  <p><i class="fa fa-user"> &nbsp; </i><a href="GetInforController">User Profile</a></p>
 		  <p><i class="fa fa-sign-in "> &nbsp;</i><a href="home.jsp">Logout</a></p>
 	  </div>
 	</div>
