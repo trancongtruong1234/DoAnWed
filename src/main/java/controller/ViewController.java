@@ -36,11 +36,28 @@ public class ViewController extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		// get data từ dao
+				String indexPage = request.getParameter("index");
+				if (indexPage== null) {
+					indexPage="1";
+				}
+				int index = Integer.parseInt(indexPage);
 				DaoViewContent dao = new DaoViewContent();
-				List<Content> list=dao.getdata();
+				/* List<Content> list=dao.getdata(); */
 				//b2 set data cho jsp
-				request.setAttribute("listp", list);
+				/* request.setAttribute("listp", list); */
+				int count = dao.getCount();
+				int endpage = count/10;
+				/* System.out.print(endpage); */
+				if (count %10 !=0) {
+					endpage++;
+				}
+				request.setAttribute("endp", endpage);
+				List<Content> listPage = dao.pagingContent(index);
+				request.setAttribute("listA", listPage);
 				request.getRequestDispatcher("viewContent.tiles").forward(request, response);
+				/*
+				 * System.out.print(count); System.out.print(endpage);
+				 */
 	}
 
 	/**

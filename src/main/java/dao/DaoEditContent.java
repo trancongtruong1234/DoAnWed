@@ -1,21 +1,14 @@
 package dao;
-import entity.Content;
-import entity.Member;
 import context.DBContext;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Iterator;
-import java.util.List;
+
 public class DaoEditContent {
-	public Content updateContent (String id, String title, String brief, String content)
+	public void updateContent (String title, String brief, String content,String id)
 	{
 		Connection conn = null;
 		PreparedStatement ps = null;
-		ResultSet rs = null;
 		String query = "update Content set Title =?,Brief=? ,Content=? where id= ?";
 		try {
 			new DBContext();
@@ -26,10 +19,14 @@ public class DaoEditContent {
 			ps.setString(3, content);
 			ps.setString(4, id);
 			ps.executeUpdate();
+			//System.out.printf("được");
 		} catch (Exception e) {
-
+			System.out.printf("loi");
 		}
-		return null;
-		
 	}
+	public static void main(String[] args) {
+		/*
+		 * DaoEditContent dao = new DaoEditContent(); dao.updateContent("dfd", "dvd",
+		 * "fgfgf","14"); //System.out.printf("vdvdv");
+		 */	}
 }

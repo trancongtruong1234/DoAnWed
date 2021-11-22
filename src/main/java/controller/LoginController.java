@@ -54,9 +54,9 @@ public class LoginController extends HttpServlet {
 				session.setAttribute("pwd", password);
 				session.setAttribute("us", username);
 				// set timeout session (seconds)
-				session.setMaxInactiveInterval(60);
+				/* session.setMaxInactiveInterval(60); */
 				// login success
-				resp.sendRedirect("home.jsp");
+				resp.sendRedirect("GetInforController");
 					
 			}else {			
 				// login failed

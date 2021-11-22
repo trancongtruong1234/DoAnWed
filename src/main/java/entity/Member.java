@@ -80,6 +80,14 @@ public class Member {
 		this.createDate = createDate;
 		this.updateDate = updateDate;
 	}
+	
+	public Member(String firstName, String lastName, String phone, String description) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.phone = phone;
+		this.description = description;
+	}
 
 	private int id;
 	private String firstName;

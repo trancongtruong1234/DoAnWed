@@ -1,11 +1,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <title>Insert title here</title>
 <link rel ="stylesheet" href="style/viewContent.css">
 <script type="text/javascript" src= "js/viewContent.js"></script>
@@ -13,11 +13,11 @@
 <script type="text/javascript">
 			$(function() {
 				$('.preloading').fadeIn('slow', function() {
-					$(".load").delay(5000).fadeOut('slow');
+					$(".load").delay(0).fadeOut('slow');
 				});
 			});
 		</script>
-<style>
+<style> 
 .load {
 	width: 100%;
 	height: 100%;
@@ -36,15 +36,17 @@
 
 .preloading {
 	overflow: hidden;
-}
+} 
 </style>
 </head>
 <body>
+
 	<div class="preloading"> 
 		<div class="load"> 
 			<div class="nd">Loading</div>
 		</div>
-	</div>
+	</div> 
+	<%--  <c:out value="${endp}" />  --%>
 	<div class="view-body">
 		<div class="title">
 			<h1>View Content</h1>
@@ -58,7 +60,7 @@
 				<table class="view-content" border="1">
 					<thead>
 						<tr>
-							<th>#</th>
+							<th class= "a">#</th>
 							<th>Title</th>
 							<th>Brief</th>
 							<th>Created Date</th>
@@ -67,9 +69,9 @@
 					</thead>
 					<tbody>
 						<c:set var="i" scope="session" value="${1}" />
-						<c:forEach items="${listp}" var="o">
+						<c:forEach items="${listA}" var="o">
 							<tr>
-								<td><c:out value="${i}" /></td>
+								<td><c:out value="${i}"/></td>
 								<td><c:out value="${o.title}" /></td>
 								<td><c:out value="${o.brief}" /></td>
 								<td><c:out value="${o.createDate}" /></td>
@@ -78,8 +80,12 @@
 								<c:set var="i" scope="session" value="${i+1}" />
 							</tr>
 						</c:forEach>
+						
 					</tbody>
 				</table>
+				<c:forEach begin="1" end="${endp}" var ="i">
+				<a href="ViewController?index=${i}">${i}</a>
+				</c:forEach>
 			</div>
 		</fieldset>
 	</div>

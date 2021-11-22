@@ -42,9 +42,10 @@ public class EditContentController extends HttpServlet {
 		String brief = request.getParameter("brief");
 		String content = request.getParameter("content");
 		String id = request.getParameter("id");
+		//sSystem.out.print(title+ brief+ content+id);
 		DaoEditContent dao = new DaoEditContent();
 		dao.updateContent(title, brief, content,id);
-		response.sendRedirect("/views/editContent.jsp");
+		response.sendRedirect("editContent.tiles");
 		
 	}
 

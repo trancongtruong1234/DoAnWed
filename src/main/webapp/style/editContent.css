@@ -1,34 +1,39 @@
 @charset "ISO-8859-1";
 hr {
-    width: 95%;
+    width: 100%;
 }
-.add-content{
+.edit-content{
    position : relative;
    width:80%;
-    
 }
-.add-content .text-add-content{
+.edit-content .viewall{
+      border-radius: 4px;
+      border: 2px solid #DDDDDD;
+}
+.edit-content .text-edit-content{
     margin-left: 2.5%;   
 }
-.add-content .form-add-content{
+.edit-content .form-edit-content{
     margin: 16px 32px;
     border: 1px solid rgb(221, 221, 221);
 }
-.add-content .title{
+.edit-content .title{
     margin-top:0;
     padding: 12px 16px ;
     border-bottom: 1px solid rgb(221, 221, 221);
     background-color: rgb(245, 245, 245);
 }
-.add-content .row-form{
+.edit-content .row-form{
+	
     padding: 12px 16px;
 }
-.add-content label{
+
+.edit-content label{
     display: block;
     font-weight: 550 ;
     margin-bottom: 8px;
 }
-.add-content .textbox{
+.edit-content .textbox{
     width: 75%;
     min-height: 32px;
     border: 1px solid rgb(204, 204,204);
@@ -36,7 +41,7 @@ hr {
     padding: 4px 12px;
     
 }
-.add-content .button{
+.edit-content .button{
     border: 1px solid rgb(204, 204,204);
     border-radius: 4px;
     background-color: white;

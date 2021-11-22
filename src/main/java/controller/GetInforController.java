@@ -2,25 +2,24 @@ package controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import entity.Content;
 
-import dao.DaoGetInfor;
+
+import dao.DaoEditProfile;
+import entity.Member;
 
 /**
- * Servlet implementation class EditController
+ * Servlet implementation class GetInforController
  */
-/* @WebServlet(urlPatterns = {"/EditContent"}) */
-public class EditController extends HttpServlet {
+public class GetInforController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public EditController() {
+    public GetInforController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,14 +29,12 @@ public class EditController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-		String id = request.getParameter("id");
-		DaoGetInfor dao = new DaoGetInfor();
-		Content s =  dao.getIf(id);
-		request.setAttribute("st", s);
-		request.setAttribute("id", id);
-		request.getRequestDispatcher("editContent.tiles").forward(request, response);
-		//System.out.println(id);
+		int id = (int) request.getSession().getAttribute("id");
+		
+		DaoEditProfile dao = new DaoEditProfile();
+		Member m = dao.getById(id);
+		request.setAttribute("detail", m);
+		request.getRequestDispatcher("home.jsp").forward(request, response);
 	}
 
 	/**
@@ -48,6 +45,5 @@ public class EditController extends HttpServlet {
 		doGet(request, response);
 		
 	}
-	
 
 }

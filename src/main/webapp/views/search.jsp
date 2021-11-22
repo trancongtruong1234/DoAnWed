@@ -16,11 +16,11 @@
 <body>
 	<div class="view-body">
 		<div class="title">
-			<h1>View Content</h1>
+			<h1>Search Content</h1>
 		</div>
 		<hr>
 		<fieldset class="view">
-			<div class="list">View Content List</div>
+			<div class="list">Search Content</div>
 		</fieldset>
 		<fieldset class="field">
 			<div class="form">
