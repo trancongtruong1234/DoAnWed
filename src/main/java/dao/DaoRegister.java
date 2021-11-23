@@ -1,6 +1,5 @@
 package dao;
 
-import entity.Content;
 import entity.Member;
 import context.DBContext;
 
@@ -9,10 +8,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
-import java.util.List;
 public class DaoRegister {
 	
 	Connection conn = null;	
@@ -26,10 +22,9 @@ public class DaoRegister {
 	
 	public void register(String username, String email, String password) {
 		
-		LocalDate date = LocalDate.now();
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-		String aDate = date.format(formatter);
-		System.out.println(aDate);
+		Date date = new Date(); 
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		String aDate = formatter.format(date);
 		String query = "insert into member(UserName,Email,Password,CreatedDate) values (?,?,?,?)";
 
 		try {
