@@ -8,6 +8,9 @@ import context.DBContext;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.List;
 public class DaoRegister {
@@ -17,11 +20,17 @@ public class DaoRegister {
 	ResultSet rs = null;
 	
 	public static void main(String[] args) {
+
 	}
 	
 	
 	public void register(String username, String email, String password) {
-		String query = "insert into member(UserName,Email,Password) values (?,?,?)";
+		
+		LocalDate date = LocalDate.now();
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+		String aDate = date.format(formatter);
+		System.out.println(aDate);
+		String query = "insert into member(UserName,Email,Password,CreatedDate) values (?,?,?,?)";
 
 		try {
 			new DBContext();
@@ -30,6 +39,7 @@ public class DaoRegister {
 			ps.setString(1, username);
 			ps.setString(2, email);
 			ps.setString(3, password);
+			ps.setString(4, aDate);
 			ps.executeUpdate();
 		}
 		catch(Exception e) {
