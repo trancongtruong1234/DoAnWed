@@ -36,7 +36,8 @@ public class RegisterController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		response.setContentType("text/html;charset=UTF-8");
+		request.setCharacterEncoding("UTF-8");
 		String username = request.getParameter("username");
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
@@ -55,7 +56,7 @@ public class RegisterController extends HttpServlet {
 			}
 			else 
 			{
-				String err ="Tai khoan da ton tai";
+				String err ="Email đã tồn tại";
 				request.setAttribute("err", err);
 				request.getRequestDispatcher("register.jsp").forward(request, response);
 			}

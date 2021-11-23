@@ -38,15 +38,13 @@ public class DaoRegister {
 	}
 	
 	public Member checkMemberExist(String usernamein, String emailin ) {
-		String query = "select * from member where UserName ="+"?"+
-				"or Email ="+"?";
+		String query = "select * from member where Email = ?";
 
 		try {
 			new DBContext();
 			conn = DBContext.getConnection();
 			ps = conn.prepareStatement(query);
-			ps.setString(1, usernamein);
-			ps.setString(2, emailin);
+			ps.setString(1, emailin);
 			rs = ps.executeQuery();
 			while(rs.next()) {
 				

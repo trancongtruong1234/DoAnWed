@@ -38,6 +38,9 @@ body{
     font-size: 15px;
     outline: none;
 }
+.center form input:focus{
+	box-shadow: 0px 0px 3px 1px #0081CF;
+}
 .center form #btnRegister{
     height: 40px;
     width: 95%;
@@ -51,3 +54,12 @@ body{
     background: #389e38;
     transition: .5s;
 }
+label.error{
+	display: block;
+	color: red;
+}
+a{
+	text-decoration: none;
+	color: #0081CF;
+}
+
