@@ -25,7 +25,7 @@ public class DaoRegister {
 		Date date = new Date(); 
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String aDate = formatter.format(date);
-		String query = "insert into member(UserName,Email,Password,CreatedDate) values (?,?,?,?)";
+		String query = "insert into member(UserName,Email,Password,CreatedDate,UpdateTime) values (?,?,?,?,?)";
 
 		try {
 			new DBContext();
@@ -35,6 +35,7 @@ public class DaoRegister {
 			ps.setString(2, email);
 			ps.setString(3, password);
 			ps.setString(4, aDate);
+			ps.setString(5, aDate);
 			ps.executeUpdate();
 		}
 		catch(Exception e) {
