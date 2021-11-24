@@ -37,16 +37,17 @@ public class EditContentController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
 		response.setContentType("text/html;charset=UTF-8");
-		request.setCharacterEncoding("UTF-8");
+		request.setCharacterEncoding("UTF-8");;
+		doGet(request, response);
 		String title = request.getParameter("title");
 		String brief = request.getParameter("brief");
 		String content = request.getParameter("content");
+		String updateTime = request.getParameter("updateTime");
 		String id = request.getParameter("id");
 		//sSystem.out.print(title+ brief+ content+id);
 		DaoEditContent dao = new DaoEditContent();
-		dao.updateContent(title, brief, content,id);
+		dao.updateContent(title, brief, content,updateTime,id);
 		response.sendRedirect("editContent.tiles");
 		
 	}

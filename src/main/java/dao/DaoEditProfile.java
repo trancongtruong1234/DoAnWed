@@ -20,7 +20,7 @@ public class DaoEditProfile {
 	ResultSet rs = null;
 	
 	public void editProfile(String fname, String lname, String phone, String desc, String id ) {
-		String query = "update Member set FisrtName= ?, LastName= ?, Phone= ?, Description= ? where id = ?";
+		String query = "update Member set FisrtName= ?, LastName= ?, Phone= ?, Description= ?, UpdateTime = now() where id = ?";
 		try {
 			new DBContext();
 			conn = DBContext.getConnection();

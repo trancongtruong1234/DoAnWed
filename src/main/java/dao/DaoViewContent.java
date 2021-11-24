@@ -16,7 +16,6 @@ public class DaoViewContent {
 	Connection conn = null;
 	PreparedStatement ps = null;
 	ResultSet rs = null;
-	String a = "3";
 
 	public List<Content> getdata() {
 		List<Content> list = new ArrayList<>();
@@ -27,7 +26,7 @@ public class DaoViewContent {
 			ps = conn.prepareStatement(query);
 			rs = ps.executeQuery();
 			while (rs.next()) {
-				list.add(new Content(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getDate(5),
+				list.add(new Content(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getTimestamp(5),
 						rs.getDate(6), rs.getInt(7), rs.getInt(8)));
 			}
 		} catch (Exception e) {
@@ -36,11 +35,12 @@ public class DaoViewContent {
 
 		return list;
 	}
-	public int getCount() {
-		String query="select count(*) from Content where AuthorId = 2";
+	public int getCount(int id) {
+		String query="select count(*) from Content where AuthorId = ?";
 		try {
 			conn = DBContext.getConnection();// mở kết nối với mýql
 			ps = conn.prepareStatement(query);
+			ps.setInt(1, id);
 			rs = ps.executeQuery();
 			while (rs.next())
 			{
@@ -51,19 +51,21 @@ public class DaoViewContent {
 		}
 		return 0;
 	}
-	public List<Content> pagingContent(int index) 
+	public List<Content> pagingContent(String id,int index) 
 	{
+		
 		List<Content> list = new ArrayList<>();
 		String query ="SELECT *FROM Content\n"
-				+ "where AuthorId = 2\n"
+				+ "where AuthorId=?\n"
 				+ "limit ?,10;";
 		try {
 			conn = DBContext.getConnection();// mở kết nối với mýql
 			ps = conn.prepareStatement(query);
-			ps.setInt(1, (index-1)*10);
+			ps.setString(1, id);
+			ps.setInt(2, (index-1)*10);
 			rs=ps.executeQuery();
 			while (rs.next()) {
-				list.add(new Content(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getDate(5),
+				list.add(new Content(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getTimestamp(5),
 						rs.getDate(6), rs.getInt(7), rs.getInt(8)));
 			}
 		} catch (Exception e) {
@@ -79,11 +81,10 @@ public class DaoViewContent {
 		 * List<Content> list = dao.getdata(); for (Content o : list) {
 		 * System.out.print(o.getTitle());
 		 */
-		List<Content> list = dao.pagingContent(2);
-		for (Content o : list)
-		{
-			System.out.print(o.getId());
-		}
+		/*
+		 * List<Content> list = dao.pagingContent(2); for (Content o : list) {
+		 * System.out.print(o.getId()); }
+		 */
 		
 	}
 }

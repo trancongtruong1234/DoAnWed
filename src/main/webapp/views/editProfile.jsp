@@ -6,66 +6,8 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel ="stylesheet" href="style/editProfile.css">
 <title>Document</title>
-<style>
-.btn {
-	height: 40px;
-}
-#email {
-	border: none;
-}
-.form-control {
-	margin-top: 8px;
-	border: 2px solid #DDDDDD;
-	width: 95%;
-	height: 30px;
-}
-.text-area {
-	margin-top: 8px;
-	border: 2px solid #DDDDDD;
-	width: 95%;
-}
-.form-group {
-	margin-bottom: 20px;
-}
-label {
-	font-weight: bold;
-}
-th.title {
-	font-weight: normal;
-}
-hr {
-	width: 95%;
-}
-.view-body .title {
-	margin-left: 2.5%;
-}
-.field {
-	margin: 0 2.5% 0 2.5%;
-	border: 2px solid #DDDDDD;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-	border-top-width: 2px;
-}
-.form {
-	margin-top: 10px;
-}
-.view-body {
-	display: block;
-}
-.view-body .view {
-	margin: 0 2.5% 0 2.5%;
-	margin-top: 20px;
-	border: 2px solid #DDDDDD;
-	background-color: #f5f5f5;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
-	border-bottom-width: 0px;
-}
-.view .list {
-	padding-top: 5px;
-}
-</style>
 </head>
 
 <body>
@@ -78,7 +20,7 @@ hr {
 			<div class="list">Profile Form Elements</div>
 		</fieldset>
 		<fieldset class="field">
-			<form action="EditProfileController?id=${sessionScope.id}" method="post">
+			<form action="EditProfileController?id=${sessionScope.theLastUser.id}" method="post">
 				<div class="form-group">
 					<label class="control-label" for="fname">First name</label>
 					<div class="text">
@@ -99,7 +41,7 @@ hr {
 					<label class="control-label">Email</label>
 					<div>
 						<input readonly class="form-control" type="text" name="email"
-							id="email" value="${sessionScope.em }" />
+							id="email" value="${sessionScope.theLastUser.email }" />
 					</div>
 				</div>
 

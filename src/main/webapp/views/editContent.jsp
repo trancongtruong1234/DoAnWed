@@ -6,6 +6,12 @@
 <head>
 <link rel="stylesheet" type="text/css" href="style/editContent.css">
 <meta charset="UTF-8">
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js" type="text/javascript"></script>
+<script type="text/javascript" src= "js/editContent.js"></script>
+<style>
+
+</style>
 <title>EditContent</title>
 </head>
 <body>
@@ -13,7 +19,7 @@
 		<h1 class="text-edit-content">Edit Content</h1>
 		<hr>
 		<form class="viewall" action="EditContentController?id=${id}"
-			method="post">
+			method="post" id="check">
 			<%-- <c:out value="${id}" /> --%>
 			<br />
 
@@ -25,7 +31,7 @@
 			</div>
 			<div class="row-form">
 				<label for="brief">Brief</label>
-				<textarea name="brief" id="brief" rows="3" class="textbox">${st.brief}</textarea>
+				<textarea name="brief" id="brief" rows="3" class="textbox" >${st.brief}</textarea>
 			</div>
 			<div class="row-form">
 				<label for="content">Content</label>
@@ -36,12 +42,6 @@
 				<input type="submit" class="button" value="Submit Button"> <input
 					type="reset" class="button" value="Reset Button">
 			</div>
-			<!-- <script>
-			function msg()
-			{
-				location.reload();
-			}
-			</script> -->
 		</form>
 	</div>
 </body>

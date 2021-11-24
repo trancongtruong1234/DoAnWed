@@ -1,27 +1,24 @@
 package controller;
 
 import java.io.IOException;
-import java.util.List;
-
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import dao.DaoSearch;
-import entity.Content;
+import javax.servlet.http.HttpSession;
+import dao.DaoAddContent;
 import entity.Member;
-
 /**
- * Servlet implementation class Search
+ * Servlet implementation class AddContentController
  */
-public class SearchController extends HttpServlet {
+public class AddContentController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public SearchController() {
+    public AddContentController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,29 +27,30 @@ public class SearchController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		response.setContentType("text/html;charset=UTF-8");
 		request.setCharacterEncoding("UTF-8");
-		Member mem = (Member) request.getSession().getAttribute("theLastUser");
-		int id = mem.getId();
-		String txtSearch = request.getParameter("search");
-		DaoSearch daosearch = new DaoSearch();
-		List<Content> list = daosearch.search(txtSearch,id);
-		if(txtSearch == "" || list.isEmpty()) {
-			request.setAttribute("mess", "Không tìm thấy nội dung :(");
-			request.getRequestDispatcher("search.tiles").forward(request, response);
-		}else {
-			request.setAttribute("listSearch", list);
-			request.getRequestDispatcher("search.tiles").forward(request, response);
-		}
+		
+		HttpSession session = request.getSession();
+		Member a = new Member();
+		a = (Member)session.getAttribute("theLastUser");
+		int id = a.getId();
+		
+		String title=request.getParameter("title");
+		String brief=request.getParameter("brief");
+		String content=request.getParameter("content");
+		
+		DaoAddContent addcontent = new DaoAddContent();
+		addcontent.addContent(id, title, brief, content);
+		response.sendRedirect("formContent.tiles");
+		// TODO Auto-generated method stub
+		doGet(request, response);
 	}
 
 }

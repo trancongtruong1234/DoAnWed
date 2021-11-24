@@ -29,8 +29,10 @@ public class GetInforController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		int id = (int) request.getSession().getAttribute("id");
-		
+		response.setContentType("text/html;charset=UTF-8");
+		request.setCharacterEncoding("UTF-8");
+		Member mem = (Member) request.getSession().getAttribute("theLastUser");
+		int id = mem.getId();
 		DaoEditProfile dao = new DaoEditProfile();
 		Member m = dao.getById(id);
 		request.setAttribute("detail", m);

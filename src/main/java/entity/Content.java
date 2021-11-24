@@ -41,7 +41,7 @@ public class Content {
 		return createDate;
 	}
 
-	public void setCreateDate(Date createDate) {
+	public void setCreateDate(java.sql.Timestamp createDate) {
 		this.createDate = createDate;
 	}
 
@@ -69,7 +69,7 @@ public class Content {
 		this.authorId = authorId;
 	}
 
-	public Content(int id, String title, String brief, String content, Date createDate, Date updateDate, int sort,
+	public Content(int id, String title, String brief, String content, java.sql.Timestamp createDate, Date updateDate, int sort,
 			int authorId) {
 		super();
 		this.id = id;
@@ -81,7 +81,7 @@ public class Content {
 		this.sort = sort;
 		this.authorId = authorId;
 	}
-	public Content(int id, String text, String brief, Date createDate) {
+	public Content(int id, String text, String brief, java.sql.Timestamp createDate) {
 		super();
 		this.id = id;
 		this.title = text;
@@ -93,7 +93,7 @@ public class Content {
 	private String title;
 	private String brief;
 	private String content;
-	private Date createDate;
+	private java.sql.Timestamp createDate;
 	private Date updateDate;
 	private int sort;
 	private int authorId;

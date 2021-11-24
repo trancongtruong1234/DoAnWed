@@ -1,11 +1,10 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page language="java" contentType="text/html; charset=utf-8"
-	pageEncoding="utf-8"%>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel ="stylesheet" href="style/viewContent.css">
 <script type="text/javascript" src= "js/viewContent.js"></script>
@@ -18,6 +17,7 @@
 			});
 		</script>
 <style> 
+<style>
 .load {
 	width: 100%;
 	height: 100%;
@@ -34,8 +34,22 @@
 	font-size: 40px;
 }
 
-.preloading {
-	overflow: hidden;
+.pagination a {
+   color: black;
+   float: left;
+   padding: 8px 16px;
+   text-decoration: none;
+   transition: background-color .3s;
+   text-align: center;
+ }
+ .pagination  {
+   text-align: center;
+ }
+
+/* thêm màu nền khi người dùng hover vào class không active */
+ .pagination a:hover:not(.active) {
+   background-color: #ddd;
+ }
 } 
 </style>
 </head>
@@ -83,9 +97,14 @@
 						
 					</tbody>
 				</table>
+				<div class="pagination">
 				<c:forEach begin="1" end="${endp}" var ="i">
-				<a href="ViewController?index=${i}">${i}</a>
+				
+				<a class="active" href="ViewController?index=${i}">${i}</a>
+				
 				</c:forEach>
+				</div>
+				
 			</div>
 		</fieldset>
 	</div>

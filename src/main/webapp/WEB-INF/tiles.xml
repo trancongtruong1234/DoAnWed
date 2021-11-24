@@ -13,7 +13,7 @@
   <!-- Form content page -->
   <definition name="formContent" extends="main">
     <put-attribute name="title" value="Form Content" />
-    <put-attribute name="body" value="/views/formContent.jsp" />
+    <put-attribute name="body" value="/views/addContent.jsp" />
   </definition>
   
     <!-- View content page -->

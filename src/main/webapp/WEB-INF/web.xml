@@ -82,6 +82,13 @@
 		<servlet-name>GetInforController</servlet-name>
 		<servlet-class>controller.GetInforController</servlet-class>
 	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>AddContentController</display-name>
+		<servlet-name>AddContentController</servlet-name>
+		<servlet-class>controller.AddContentController</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>Tiles Dispatch</servlet-name>
@@ -122,5 +129,9 @@
 	<servlet-mapping>
 		<servlet-name>GetInforController</servlet-name>
 		<url-pattern>/GetInforController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AddContentController</servlet-name>
+		<url-pattern>/AddContentController</url-pattern>
 	</servlet-mapping>
 </web-app>

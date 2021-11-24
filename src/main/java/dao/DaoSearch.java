@@ -16,19 +16,20 @@ public class DaoSearch {
 	PreparedStatement ps = null;
 	ResultSet rs = null;
 
-	public List<Content> search(String txtSearch) {
+	public List<Content> search(String txtSearch, int id) {
 		List<Content> list = new ArrayList<>();
-		String query = "select id,Title,Brief,CreatedDate from Content where Title like ? or Brief like ?";
+		String query = "select id,Title,Brief,CreatedDate from Content where (Title like ? or Brief like ?) and AuthorId=?";
 		try {
 			new DBContext();
 			conn = DBContext.getConnection();
 			ps = conn.prepareStatement(query);
 			ps.setString(1, "%" + txtSearch + "%");
 			ps.setString(2, "%" + txtSearch + "%");
+			ps.setInt(3, id);
 			rs= ps.executeQuery();
 			while (rs.next()) {
 				list.add(new Content(rs.getInt("id"), rs.getString("Title"), rs.getString("Brief"),
-						rs.getDate("CreatedDate")));
+						rs.getTimestamp("CreatedDate")));
 			}
 		} catch (SQLException e) {
 			printSQLException(e);
