@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import dao.DaoSearch;
 import entity.Content;
+import entity.Member;
 
 /**
  * Servlet implementation class Search
@@ -38,11 +39,20 @@ public class SearchController extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		response.setContentType("text/html;charset=UTF-8");
+		request.setCharacterEncoding("UTF-8");
+		Member mem = (Member) request.getSession().getAttribute("theLastUser");
+		int id = mem.getId();
 		String txtSearch = request.getParameter("search");
 		DaoSearch daosearch = new DaoSearch();
-		List<Content> list = daosearch.search(txtSearch);
-		request.setAttribute("listSearch", list);
-		request.getRequestDispatcher("search.tiles").forward(request, response);
+		List<Content> list = daosearch.search(txtSearch,id);
+		if(txtSearch == "" || list.isEmpty()) {
+			request.setAttribute("mess", "Không tìm thấy nội dung :(");
+			request.getRequestDispatcher("search.tiles").forward(request, response);
+		}else {
+			request.setAttribute("listSearch", list);
+			request.getRequestDispatcher("search.tiles").forward(request, response);
+		}
 	}
 
 }

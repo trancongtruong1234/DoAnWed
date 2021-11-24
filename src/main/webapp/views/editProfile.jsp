@@ -93,7 +93,7 @@ hr {
 			<div class="list">Profile Form Elements</div>
 		</fieldset>
 		<fieldset class="field">
-			<form action="EditProfileController?id=${sessionScope.id}" method="post">
+			<form action="EditProfileController?id=${sessionScope.theLastUser.id}" method="post">
 				<div class="form-group">
 					<label class="control-label" for="fname">First name</label>
 					<div class="text">
@@ -114,7 +114,7 @@ hr {
 					<label class="control-label">Email</label>
 					<div>
 						<input readonly class="form-control" type="text" name="email"
-							id="email" value="${sessionScope.em }" />
+							id="email" value="${sessionScope.theLastUser.email }" />
 					</div>
 				</div>
 

@@ -13,7 +13,7 @@
 <div id ="menu">
  	<div id="search-container">
     	<form action="<%=request.getContextPath()%>/search" method = "post">
-      		<input type="text" placeholder="Seach..." class ="txtSearch" name="search">
+      		<input type="text" placeholder="Seach..." class ="txtSearch" name="search" >
       		<button type="submit"><i class="fa fa-search" style="color: #696665"></i></button>
     	</form>
   	</div>

@@ -77,6 +77,7 @@ table tbody {
 			<h1>Search Content</h1>
 		</div>
 		<hr>
+		<h2>${mess}</h2>
 		<fieldset class="view">
 			<div class="list">Search Content List</div>
 		</fieldset>
