@@ -74,6 +74,13 @@
 		<servlet-name>LoginController</servlet-name>
 		<servlet-class>controller.LoginController</servlet-class>
 	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>AddContentController</display-name>
+		<servlet-name>AddContentController</servlet-name>
+		<servlet-class>controller.AddContentController</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>Tiles Dispatch</servlet-name>
@@ -110,5 +117,9 @@
 	<servlet-mapping>
 		<servlet-name>LoginController</servlet-name>
 		<url-pattern>/LoginController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AddContentController</servlet-name>
+		<url-pattern>/AddContentController</url-pattern>
 	</servlet-mapping>
 </web-app>

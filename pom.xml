@@ -84,6 +84,11 @@
 			<version>2.0</version>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+		    <groupId>org.webjars.bower</groupId>
+		    <artifactId>jquery</artifactId>
+		    <version>3.5.1</version>
+		</dependency>
     
   </dependencies>
 
