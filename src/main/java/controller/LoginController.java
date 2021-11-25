@@ -54,7 +54,7 @@ public class LoginController extends HttpServlet {
 			List<Member> memberList = null;
 			if((session.getAttribute("memberList") != null) && (member != null)) {
 				memberList = (List<Member>) session.getAttribute("memberList");
-				resp.sendRedirect("viewContent.tiles");
+				resp.sendRedirect("ViewController");
 			}else if((session.getAttribute("memberList") == null) && (member != null)) {
 				memberList = new ArrayList<Member>();
 				memberList.add(member);
