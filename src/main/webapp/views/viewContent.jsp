@@ -12,7 +12,7 @@
 <script type="text/javascript">
 			$(function() {
 				$('.preloading').fadeIn('slow', function() {
-					$(".load").delay(0).fadeOut('slow');
+					$(".load").delay(5000).fadeOut('slow');
 				});
 			});
 		</script>
