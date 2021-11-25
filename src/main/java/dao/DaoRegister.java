@@ -43,7 +43,7 @@ public class DaoRegister {
 		
 	}
 	
-	public Member checkMemberExist(String usernamein, String emailin ) {
+	public Member checkMemberExist(String emailin ) {
 		String query = "select * from member where Email = ?";
 
 		try {
@@ -64,9 +64,7 @@ public class DaoRegister {
 				String description = rs.getString(8);
 				Date createdate = rs.getDate(9);
 				Date updatetime = rs.getDate(10);
-				
-				System.out.print(rs.getString(5));
-				
+							
 				return new Member(id,firstname,lastname,username,email,password,phone,description,createdate,updatetime);
 			}
 		}

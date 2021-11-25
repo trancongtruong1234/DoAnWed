@@ -17,7 +17,6 @@
 			});
 		</script>
 <style> 
-<style>
 .load {
 	width: 100%;
 	height: 100%;

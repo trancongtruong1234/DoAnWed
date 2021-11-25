@@ -48,7 +48,7 @@ public class RegisterController extends HttpServlet {
 		}
 		else {
 			DaoRegister dao = new DaoRegister();
-			Member member = dao.checkMemberExist(username, email);
+			Member member = dao.checkMemberExist(email);
 			if(member == null)
 			{
 				dao.register(username, email, password);
