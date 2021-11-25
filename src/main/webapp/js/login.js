@@ -45,10 +45,10 @@ function checkEmail() {
 } 
 function validate() {
     if (  checkEmail() == 0 ) {
-        document.getElementById('error').innerHTML = 'Please fill the E-mail.\nExample@gmail.com ';
+        document.getElementById('error').innerHTML = 'Xin vui lòng nhập E-mail.\nExample@gmail.com ';
         return false;
     } else if (pass.value == 0 || pass.value.length < 8 || pass.value.length > 30 ){
-        document.getElementById('error').innerHTML = 'Please fill the Password !';
+        document.getElementById('error').innerHTML = 'Xin vui lòng nhập Password !';
         return false;
     } else {
         return true ;
